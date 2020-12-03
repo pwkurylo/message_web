@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #cccccc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.paddingBottom {
+  padding-bottom: 10px;
+}
+
+.padding {
+  padding-top: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 0px 20px;
+}
+
+button {
+  border: solid 1px #cccccc;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  background-color: #cccccc;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-right: 15px;
+  width: 150px;
+  height: 45px;
+}
+
+button:hover {
+  border: 1px solid #0099cc;
+  background-color: #00aacc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: rgb(16 232 222);
+  color: #666666;
+}
+
+.textAreaSize {
+  overflow-y: auto;
+  width: 320px; 
+  height: 220px;
+  border-radius: 5px;
+}
+
+.sizeBottomDiv {
+  width: 320px;
+}
+
+.section {
+  border-top: 1px solid gray;
+  padding: 20px;
+
+}
+
+.incorrectWindow{
+  position: absolute;
+  background-color: blanchedalmond;
+}
+
+.errorWindow {
+  padding-right: 25px;
+  color: red;
+}
+
+.paddingRight {
+  padding-right: 25px;
+}
+
+.box {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.directionColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.addendum {
+  font-size: x-small;
+  color: red;
+  margin-top: 5px;
+  text-align: end;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
