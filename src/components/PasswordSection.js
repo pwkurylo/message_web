@@ -8,7 +8,7 @@ export class PasswordSection extends Component {
 
     return (
       <div>
-        <label className='paddingRight'>
+        <label className='paddingRight xLarge'>
           Password:
         </label>
         <input
