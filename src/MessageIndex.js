@@ -6,7 +6,7 @@ import Button from './components/Button';
 import PasswordSection from './components/PasswordSection';
 
 const CryptoJS = require("crypto-js");
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://message-api-1987.herokuapp.com'
 
 class MessageIndex extends Component {
   state = {
