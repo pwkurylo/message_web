@@ -24,6 +24,10 @@
   color: white;
 }
 
+.xLarge {
+  .font-size: x-large;
+}
+
 .floatRight {
   float: right;
 }
