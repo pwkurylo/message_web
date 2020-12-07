@@ -10,7 +10,7 @@ export default class Button extends Component {
       <button
         type='button'
         className='greenButton'
-        disabled={disable}
+        disabled={true}
         onClick={onClick}
       >
         {buttonText}
