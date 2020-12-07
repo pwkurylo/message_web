@@ -51,12 +51,10 @@ class MessageIndex extends Component {
     })
       .then(response => response.json())
       .then(response => {
-        if ('errors' in response) {
-          this.setState({ errors: response.errors })
-        }
-        console.log('response', response)
+        if ('errors' in response) { throw(response.errors) }
         this.setState({ message_url: response.message_url })
       })
+      .catch(errors => this.setState({ errors }))
   }
 
   render () {
@@ -120,7 +118,7 @@ class MessageIndex extends Component {
           </BoxSection>
         </div>
         <Button
-          disable={disableButton}
+          //disable={disableButton}
           onClick={this.saveMessage}
           buttonText={'Save'}
         />
