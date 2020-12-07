@@ -118,7 +118,7 @@ class MessageIndex extends Component {
           </BoxSection>
         </div>
         <Button
-          //disable={disableButton}
+          disable={disableButton}
           onClick={this.saveMessage}
           buttonText={'Save'}
         />
