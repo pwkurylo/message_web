@@ -76,11 +76,13 @@ class MessageShow extends Component {
         </div>
       )
     } else if (isLoading) {
+      return(
        <BoxSection>
           <header>
             {'Wait...'}
           </header>
         </BoxSection>
+       )
     }
     return (
       <div className="App-header">
