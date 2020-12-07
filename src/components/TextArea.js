@@ -20,10 +20,10 @@ export class TextArea extends Component {
           className='textAreaSize'
         />
         <div className='sizeBottomDiv'> 
-          {!disable && messageLength > 500 &&
+          {messageLength > 750 &&
            <span className="addendum floatLeft">* sorry your message is too long</span>
           }
-          <span className="addendum floatRight">{`${messageLength}/500`} </span>  
+          <span className="addendum floatRight">{`${messageLength}/750`} </span>  
         </div>
       </div>
     )
