@@ -62,7 +62,7 @@ class MessageIndex extends Component {
   render () {
     const { message, password, message_url, errors } = this.state
     const messageLength = message.length
-    const disableButton = messageLength === 0 || messageLength > 500
+    const disableButton = messageLength === 0 || messageLength > 750
     if (message_url) {
       return(
         <div className="App-header">
@@ -120,7 +120,7 @@ class MessageIndex extends Component {
           </BoxSection>
         </div>
         <Button
-          disabled={disableButton}
+          disable={disableButton}
           onClick={this.saveMessage}
           buttonText={'Save'}
         />
