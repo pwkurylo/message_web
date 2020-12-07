@@ -10,5 +10,5 @@ $ npm run
 ## Routes
 ```sh
 localhost:3000/app   - Main Page
-localhost:300/id/:id - Show Page
+localhost:3000/id/:id - Show Page
 ```
