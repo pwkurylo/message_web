@@ -15,7 +15,8 @@ class MessageShow extends Component {
     password: '',
     has_password: null,
     error: null,
-    incorrect: false
+    incorrect: false,
+    isLoading: true
    }
 
   handlePassword = (event) => {
@@ -47,16 +48,18 @@ class MessageShow extends Component {
 
   async componentDidMount () {
     const id = this.props.match.params.id
-    const response = await fetch(`${API_URL}/api/v1/message/${id}`);
-    const json = await response.json();
-      if ('error' in json) {
-       return this.setState({error: json.error})
-      }
-    this.setState({ message: json.message, has_password: json.password })
+    try {
+      const response = await fetch(`${API_URL}/api/v1/message/${id}`);
+      const json = await response.json();
+      if ('error' in json) { throw(json.error) }
+      this.setState({ message: json.message, has_password: json.password, isLoading: false })
+    } catch(error) {
+      this.setState({ error, isLoading: false })
+    }
   }
 
   render () {
-    const { message, password, has_password, error, incorrect} = this.state
+    const { message, password, isLoading, has_password, error, incorrect} = this.state
     const messageLength = message.length
 
     if (error) {
@@ -72,6 +75,12 @@ class MessageShow extends Component {
           </Link> 
         </div>
       )
+    } else if (isLoading) {
+       <BoxSection>
+          <header>
+            {'Wait...'}
+          </header>
+        </BoxSection>
     }
     return (
       <div className="App-header">
